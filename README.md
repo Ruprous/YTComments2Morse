@@ -66,7 +66,7 @@ python yt_morse_live.py
 
 1. 実行するとライブ配信のURLまたはIDの入力を求められます。
    ```
-   🎥 配信のURLかVideo IDを入力してな：
+   Enter YouTube Live URL or Video ID: ：
    https://www.youtube.com/live/abcdefg1234
    ```
 
