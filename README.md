@@ -38,7 +38,15 @@ YouTubeライブ配信のチャット欄に送られた `/morse` コマンド付
 
 - Python 3.8 以降（推奨：Python 3.12）
 - ffmpeg（音声処理に必要）
-- インストール済パッケージ：
+
+### 📦 使用パッケージ
+
+- `pytchat`
+- `simpleaudio`
+- `pydub`
+- `keyboard`
+
+### 🛠 インストールコマンド
 
 ```bash
 pip install pytchat simpleaudio pydub keyboard
@@ -50,10 +58,11 @@ pip install pytchat simpleaudio pydub keyboard
 
 ```
 YTComments2Morse/
-├── yt_morse_live.py         ← メインスクリプト
-├── ffmpeg/
-│   └── ffmpeg.exe           ← Windows用ffmpeg実行ファイル
-└── README.md                ← このドキュメント
+├── src/
+│   ├── YTCmt2Morse.py         ← メインスクリプト
+│   └── ffmpeg.exe             ← 同梱されたffmpegバイナリ（Windows用）
+├── LICENSE
+└── README.md
 ```
 
 ---
@@ -61,12 +70,12 @@ YTComments2Morse/
 ## 🚀 Usage / 使い方
 
 ```bash
-python yt_morse_live.py
+python src/YTCmt2Morse.py
 ```
 
 1. 実行するとライブ配信のURLまたはIDの入力を求められます。
    ```
-   Enter YouTube Live URL or Video ID: ：
+   Enter YouTube Live URL or Video ID:
    https://www.youtube.com/live/abcdefg1234
    ```
 
@@ -95,29 +104,31 @@ python yt_morse_live.py
 | 周波数       | 600Hz     |
 | ドット長     | 80ms      |
 | ダッシュ長   | 200ms     |
-| シンボル間   | 60ms 無音 |
-| 文字間       | 150ms 無音|
-| 単語間       | 400ms 無音|
-| ノイズ音量   | -35 dB    |
-| トーン音量   | -10 dB    |
+| シンボル間   | 40ms 無音 |
+| 文字間       | 80ms 無音|
+| 単語間       | 260ms 無音|
+| ノイズ音量   | -55 dB    |
+| トーン音量   | -30 dB    |
 
 ---
 
-## 📥 備考
+## 📥 ffmpegについて
 
-- ffmpegが見つからない場合、次のようにパスをスクリプト内で指定してください：
+このプロジェクトに含まれる `ffmpeg.exe` は、LGPL v2.1+ ライセンスに基づきビルドされたバイナリです。  
+本バイナリは再配布可能な形式であり、GPL・nonfree オプションは使用されていません。
 
-```python
-AudioSegment.converter = "./ffmpeg/ffmpeg.exe"
-```
-
-- macOSやLinuxでは `/usr/local/bin/ffmpeg` などに置くとパスが通ります。
+詳細およびソースの入手先：  
+https://ffmpeg.org
 
 ---
 
 ## 📜 License
 
-MIT License
+- このプロジェクトのコード：MIT License
+- 同梱の ffmpeg.exe：LGPL v2.1+（再配布可能なビルド）
+
+FFmpegの詳細およびライセンス：https://ffmpeg.org/legal.html
+
 
 ---
 
