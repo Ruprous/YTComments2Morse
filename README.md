@@ -6,7 +6,6 @@ YouTubeライブ配信のチャット欄に送られた `/morse` コマンド付
 600Hzのトーンとホワイトノイズを合成した、  
 レトロ通信感あふれるモールス体験ができます！
 
-## English
 📄 [Click here for the English README](./README-EN.md)
 ---
 
