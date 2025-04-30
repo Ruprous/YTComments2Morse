@@ -117,7 +117,7 @@ AudioSegment.converter = "./ffmpeg/ffmpeg.exe"
 
 ## 📜 License
 
-MIT License（予定）
+MIT License
 
 ---
 
