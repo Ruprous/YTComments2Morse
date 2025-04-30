@@ -1,5 +1,6 @@
 # 📡 YouTube Live Chat → Morse Signal Bot
 
+📄 [Click here for the English README](./README-EN.md)   
 YouTubeライブ配信のチャット欄に送られた `/morse` コマンド付きコメントを、  
 **リアルタイムにモールス信号として音声再生する Python スクリプト**です。
 600Hzのトーンとホワイトノイズを合成した、  
@@ -7,7 +8,7 @@ YouTubeライブ配信のチャット欄に送られた `/morse` コマンド付
 
 ---
 
-📄 [Click here for the English README](./README-EN.md)
+
 
 ## 🧩 Features / 特徴
 
